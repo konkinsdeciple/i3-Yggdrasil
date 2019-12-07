@@ -24,7 +24,7 @@ font xft:URWGothic-Book 11
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec konsole --hide-menubar
+bindsym $mod+Return exec xfce4-terminal --hide-menubar --hide-scrollbar
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -57,6 +57,7 @@ bindsym $mod+Shift+W exec firefox
 bindsym $mod+F3 exec pcmanfm
 bindsym Ctrl+S exec spotify %U
 # bindsym $mod+F3 exec ranger
+bindsym $mod+Ctrl+d exec /usr/bin/discord
 bindsym $mod+Shift+F3 exec zensu pcmanfm
 bindsym $mod+F5 exec terminal -e 'mocp'
 bindsym $mod+t exec --no-startup-id pkill compton
@@ -386,8 +387,8 @@ bindsym $mod+m bar mode toggle
 
 # Theme colors
 # class                   border  backgr. text    indic.   child_border
-  client.focused          #556064 #556064 #80FFF9 #FDF6E3
-  client.focused_inactive #2F3D44 #2F3D44 #1ABC9C #454948
+  client.focused          #000000 #000000 #FFFFFF #FDF6E3
+  client.focused_inactive #000000 #000000 #FFFFFF #454948
   client.unfocused        #2F3D44 #2F3D44 #1ABC9C #454948
   client.urgent           #CB4B16 #FDF6E3 #1ABC9C #268BD2
   client.placeholder      #000000 #0c0c0c #ffffff #000000 
