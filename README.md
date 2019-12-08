@@ -7,3 +7,5 @@ My custom i3 config, feel free to use it
 * *firefox*
 * *spotify*
 * *discord*
+* *oomox*
+* *pywal*
