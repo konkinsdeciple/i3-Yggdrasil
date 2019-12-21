@@ -30,7 +30,8 @@ bindsym $mod+Return exec xfce4-terminal --hide-menubar --hide-scrollbar
 bindsym $mod+Shift+q kill
 
 # start program launcher
-bindsym $mod+d exec --no-startup-id dmenu_recency
+bindsym $mod+d exec rofi -show run -hide-scrollbar -width 750 -lines 6 -font "Fira Code 20" -padding 40 -separator-style noney
+
 
 # launch categorized menu
 #bindsym $mod+z exec --no-startup-id morc_menu
@@ -69,7 +70,7 @@ bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
 bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
 bindsym $mod+Shift+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
-bindsym $mod+Shift+e exec /usr/bin/icecat &u
+bindsym $mod+Shift+e exec qutebrowser
 
 # focus_follows_mouse no
 
@@ -323,65 +324,67 @@ set_from_resource $term_color15    color15
 
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 
-#bar {
-#mode hide
-#hidden_state hide
-#modifier mod4
+bar 
+{
+
+mode dock
+hidden_state hide
+modifier Mod1
 
 
-#i3bar_command i3bar
-#	status_command i3status
-#	position bottom
+i3bar_command i3bar
+	status_command i3status
+	position top
 
 ## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
-#	tray_output primary
+	tray_output primary
 #	tray_output eDP1
 
 #	bindsym button4 nop
 #	bindsym button5 nop
-#   font xft:URWGothic-Book 11
-#	strip_workspace_numbers yes
+  font xft:URWGothic-Book 11 strip_workspace_numbers yes
 
- #   colors {
-  #      background #202A2E
-   #     statusline #F9FAF9
-    #    separator  #454947
+    colors
+ {
+        background #202A2E
+        statusline #F9FAF9
+        separator  #454947
 
 #                      border  backgr. text
-     #   focused_workspace  #F9FAF9 #16a085 #292F34
-      #  active_workspace   #595B5B #353836 #FDF6E3
-       # inactive_workspace #595B5B #202A2E #EEE8D5
-        #binding_mode       #16a085 #2C2C2C #F9FAF9
-       # urgent_workspace   #16a085 #FDF6E3 #E5201D
-   # }
+        focused_workspace  #F9FAF9 #16a085 #292F34
+        active_workspace   #595B5B #353836 #FDF6E3
+        inactive_workspace #595B5B #202A2E #EEE8D5
+        binding_mode       #16a085 #2C2C2C #F9FAF9
+        urgent_workspace   #16a085 #FDF6E3 #E5201D
+    }
+
 # status_command i3status --config ~/.i3status.conf
 
     # For dash(1) users who want signal handling to work:
- #   status_command exec ~/.bin/my_status_command
-#}
+   # status_command exec ~/.bin/my_status_command
 
-## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
-#	tray_output primary
+
+## please set your primary output first. Example: 'xrandr --output eDP1 --primary'tray_output primary
 #	tray_output eDP1
 
-#	bindsym button4 nop
-#	bindsym button5 nop
-#   font xft:URWGothic-Book 11
-#	strip_workspace_numbers yes
+	bindsym button4 nop
+	bindsym button5 nop
+   font xft:URWGothic-Book 11
+	strip_workspace_numbers yes
 
- #   colors {
-  #      background #202A2E
-   #     statusline #F9FAF9
-    #    separator  #454947
+    colors{
+        background #202A2E
+        statusline #F9FAF9
+        separator  #454947
 
 #                      border  backgr. text
-     #   focused_workspace  #F9FAF9 #16a085 #292F34
-      #  active_workspace   #595B5B #353836 #FDF6E3
-       # inactive_workspace #595B5B #202A2E #EEE8D5
-        #binding_mode       #16a085 #2C2C2C #F9FAF9
-        #rgent_workspace   #16a085 #FDF6E3 #E5201D
-    #}
-#}
+        focused_workspace  #F9FAF9 #16a085 #292F34
+        active_workspace   #595B5B #353836 #FDF6E3
+        inactive_workspace #595B5B #202A2E #EEE8D5
+        binding_mode       #16a085 #2C2C2C #F9FAF9
+        urgent_workspace   #16a085 #FDF6E3 #E5201D
+    }
+}
 
 # hide/unhide i3status bar
 bindsym $mod+m bar mode toggle
@@ -452,4 +455,3 @@ mode "$mode_gaps_outer" {
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
-#
