@@ -10,3 +10,4 @@ My custom i3 config, feel free to use it
 * *oomox*
 * *pywal*
 * *qutebrowser*
+* *rofi*
