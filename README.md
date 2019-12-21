@@ -9,3 +9,4 @@ My custom i3 config, feel free to use it
 * *discord*
 * *oomox*
 * *pywal*
+* *qutebrowser*
