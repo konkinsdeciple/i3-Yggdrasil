@@ -3,7 +3,7 @@ My custom i3 config, feel free to use it
 
 ## Reccomended packages: ## 
 *  *xfce4-terminal,*
-* *compton*
+* *compton-tryone*
 * *firefox*
 * *spotify*
 * *discord*
