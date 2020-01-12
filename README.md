@@ -11,3 +11,4 @@ My custom i3 config, feel free to use it
 * *pywal*
 * *qutebrowser*
 * *rofi*
+* *lightdm-webkit-theme-litarvan*
